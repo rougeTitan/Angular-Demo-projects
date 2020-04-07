@@ -1,0 +1,14 @@
+<div class="container">
+  <app-cockpit (serverCreated) = "onServerAdded($event)"
+                (blueprintCreated) = "onBluePrintAdded($event)"
+  ></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server-element *ngFor="let serverElement of serverElements"
+      accessing the property defined in the server element with the help of
+      property binding
+      [element]="srvElement"></app-server-element>
+    </div>
+  </div>
+</div>
